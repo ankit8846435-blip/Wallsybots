@@ -1,0 +1,18 @@
+[Unit]
+Description=Lily Telegram AI Bot
+After=network.target
+
+[Service]
+Type=simple
+# ⚠️  Change 'ubuntu' below to your actual VPS username
+User=ubuntu
+WorkingDirectory=/home/ubuntu/lily-bot
+EnvironmentFile=/home/ubuntu/lily-bot/.env
+ExecStart=/home/ubuntu/lily-bot/venv/bin/python bot.py
+Restart=always
+RestartSec=10
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

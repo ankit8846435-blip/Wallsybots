@@ -1,4 +1,6 @@
 python-telegram-bot>=20.0
 openai>=1.0.0
 python-dotenv
-firebase-admin
+Pillow
+opencv-python-headless
+httpx
